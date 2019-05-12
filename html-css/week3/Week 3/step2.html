@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+            <div><logo></logo><navigation></navigation></div>
+            <div>
+              <h1>Signup to your customtailor.com</h1>
+              <h1>Step 2/4- Tell us who you are?</h1>
+      <progress value="2" max="5"></progress>
+      <p>We will probably need to stay in touch with you. Let us know how can we reach you?</p>
+      <form action="/signup.php" method="POST" class="form">
+                
+        <!-- Email -->
+        <div class="form-item">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Write your email"
+          />
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            placeholder="Write your phone number"
+          />
+        </div>
+
+          <div class="form-item">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="10"
+            placeholder="Write your password"
+          />
+          </div>
+
+        <div class= "form-item">
+          <label for="repassword">Re-enter Password</label>
+          <input
+            type="password"
+            id="repassword"
+            name="repassword"
+            minlength="10"
+            placeholder="Repeat Password"
+          />
+        </div>
+
+        <div class="form-item">
+            <p>I want to sign up for the news letter</p>
+            <div><label for="weekly">Weekly News</label>
+                <input
+                type="radio"
+                id="weekly"
+                name="weekly"
+                />
+            
+                <label for="monthly">Monthly News</label>
+                <input
+                type="radio"
+                id="weekly"
+                name="weekly"
+                />
+
+                <label for="nonews">Don't send me news letter</label>
+                <input
+                type="checkbox"
+                id="nonews"
+                name="nonews"
+                />
+            </div>
+            <div><button type="submit" ><a href="index.html">Back</a></button>
+                <button type="submit" ><a href="step3.html">Next Step</a></button></div>
+            
+        </div>
+    </body>
+</html>

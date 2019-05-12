@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+            <div><logo></logo><navigation></navigation></div>
+            <div>
+              <h1>Signup to your customtailor.com</h1>
+              <h1>Step 4/4- Payment</h1>
+      <progress value="4" max="5"></progress>
+      <p>Please fill in your payment data</p>
+      <form action="/signup.php" method="POST" class="form">
+        <div class="form-item">
+                <label for="name">Name on the card</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Write the name"
+                />
+            <div class="form-item">
+                <label for="cardtype">Card Type</label>
+                <select id="cardtype" name="cardtype">
+                        <option value="master card">Master Card</option>
+                        <option value="visa card">Visa Card</option>
+                        <option value="debitr card">Debit Card</option>
+                        <option value="credit card">Credit Card</option>
+                      </select>
+            </div>
+
+            <div class="form-item">
+                    <label for="cardnumber">Card Number</label>
+                    <input 
+                    type="number"
+                    id="cardnumber"
+                    name="cardnumber"
+                    minlength="16"
+                    maxlength="16"
+                    placeholder="Enter your card number"
+                    />
+
+                    <label for="firstname">First Name</label>
+                    <input 
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="Enter your first name"
+                    />
+                </div>
+
+            <div class="form-item">
+                <lable for="expirymonth">Expiry Month</lable>
+                <select id="expirymonth" name="expirymonth">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <lable for="expiryyear">Expiry Year</lable>
+                <select id="expiryear" name="expiryear">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                    <lable for="ccv">CCV</lable>
+                    <input
+                    type="number"
+                    id="ccv"
+                    minlength="3"
+                    maxlength="3"
+                    name="ccv"
+                    />
+                    </div>
+
+                    <div><button type="submit" ><a href="step3.html">Back</a></button>
+                        <button type="submit" ><a href="">Submit</a></button></div>
+            
+        </div>
+    
+    </body>
+</html>
