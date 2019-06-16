@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Your Spirited Animal</title>
+    <link rel='stylesheet' href='spiritAnimalNameGenerator.css' type='text/css' />
+</head>
+<body>
+    
+<div class="form">
+        <h2>Find your Spirited Animal</h2>
+        <form name="form1" action="#" onsubmit=" required()">
+        <ul>
+        <li><input id ="name" type='text' name ='text1'/></li>
+        <li class="req">*Required Field</li>
+        <li  id="demo"></li>
+    
+    Button <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck">
+    Hover <input type="radio" onclick="javascript:yesnoCheck();"  name="yesno" id="noCheck"><br>
+    
+    <div id="ifYes" style="visibility:hidden">
+            <input  type="button" name="submit" value="Submit" id="myButton" onclick="return change(this);"/>
+        <br>
+     <div id="ifNo" style="visibility:hidden" onmouseover="over()" onmouseout="out()">
+            
+          <br>
+    </div>
+    <script src="spiritAnimalNameGenerator.js"></script>
+</body>
+</html>
