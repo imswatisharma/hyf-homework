@@ -1,0 +1,19 @@
+<!--//3.Create a button in html. When clicking this button, use the function you created in the previous task to log out the text: 3.5 seconds after button is clicked 3.5 seconds after the button is clicked. --> 
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click the button to call a function that will output "3.5 seconds after button is clicked" in a p element with id="demo".</p>
+
+<button onclick="printStringAfterDelay(3500, &quot;3.5 seconds after button is clicked&quot;)">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function printStringAfterDelay(delay, stringToLog) {
+  setTimeout(function(){ document.getElementById("demo").innerHTML = stringToLog }, delay);
+}
+</script>
+
+</body>
+</html>

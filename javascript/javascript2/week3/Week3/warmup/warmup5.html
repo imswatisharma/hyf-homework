@@ -1,0 +1,31 @@
+<!--Create a button with the text called "Log location". When this button is clicked the location (latitude, longitude) of the user should be logged out using this browser api-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click the button to call a function that will output location (latitude, longitude) of the user in a p element with id="demo".</p>
+
+<button onclick="printLocation()">Log location</button>
+
+<p id="demo"></p>
+
+<script>
+var loc = document.getElementById("demo");
+
+function printLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    loc.innerHTML = "Geolocation Not Supported By Browser.";
+  }
+}
+
+function showPosition(position) {
+  loc.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>

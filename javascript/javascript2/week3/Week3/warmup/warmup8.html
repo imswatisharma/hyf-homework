@@ -1,0 +1,30 @@
+<!--8. Check if we have double clicked on the page. A double click is defined by two clicks within 0.5 seconds. If a double click has been detected, log out the text: "double click!"--><!DOCTYPE html>
+
+<html>
+<body>
+
+<p id="demo" onclick="checkIfDoubleClick()">Click here - Single or Double</p>
+
+<script>
+var clickCount = 0;
+function checkIfDoubleClick() {
+  clickCount = clickCount + 1;
+  addDelay(500);
+}
+
+function addDelay(delay) {
+
+   setTimeout(countClick, delay);
+   
+}
+
+function countClick() {
+	if (clickCount == 2) {
+		document.getElementById("demo").innerHTML = "double click!";
+	}
+	clickCount = 0;
+}
+
+</script>
+</body>
+</html>

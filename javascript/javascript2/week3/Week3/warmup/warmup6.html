@@ -1,0 +1,34 @@
+<!--6. Optional Now show that location on a map using fx the Google maps api-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="printLocation()">Show location on map</button>
+
+<div id="mapholder"></div>
+
+<script>
+
+function printLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showLocation);
+  } else { 
+    document.getElementById("mapholder").innerHTML = "Geolocation Not Supported By Browser.";
+  }
+}
+
+function showLocation(position) {
+	var latitude = position.coords.latitude;
+	var longitude = position.coords.longitude;
+	var latlongvalue = position.coords.latitude + "," + position.coords.longitude;
+	var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+				+latlongvalue+"&amp;zoom=14&amp;size=400x300&amp;key=AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o";
+	document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+</script>
+
+</body>
+</html>
+6.txt
+Displaying 4.txt.
