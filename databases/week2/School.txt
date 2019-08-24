@@ -1,0 +1,52 @@
+use school;
+set names utf8mb4;
+create table `Class`(
+`id` int(10) unsigned NOT NULL auto_increment,
+`name`varchar(255) NOT NULL,
+`start_date` varchar(255) NOT NULL,
+`end_date` varchar(255) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE `Student` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(255) NULL,
+  `class_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_class` FOREIGN KEY (`class_id`) REFERENCES `Class` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+insert into Class (name, start_date, end_date) values ('Physics', now(), '2020-01-01');
+insert into Class (name, start_date, end_date) values ('Chemistry', now(), '2020-01-01');
+insert into Class (name, start_date, end_date) values ('Maths', now(), '2020-01-01');
+
+insert into Student (name, email, phone, class_id) values ('Swati', 'swati@gmail.com', '123456', 1);
+insert into Student (name, email, phone, class_id) values ('Rahul', 'rahul@gmail.com', '234567', 2);
+insert into Student (name, email, phone, class_id) values ('Agastya', 'agastya@gmail.com', '345678', 3);
+insert into Student (name, email, phone, class_id) values ('Sita', 'sita@gmail.com', '456789', 3);
+insert into Student (name, email, phone, class_id) values ('Gita', 'gita@gmail.com', '567890', 1);
+insert into Student (name, email, phone, class_id) values ('Rita', 'rita@gmail.com', '678901', 3);
+
+
+#Create Index
+CREATE INDEX idx_sname
+ON Student(name);
+
+# Altering Table
+alter table Class
+ADD status ENUM('not-started', 'ongoing', 'finished');
+
+select * from Class;
+
+select * from Student;
+
+select * from Student where class_id =3;
+
+update Class set status = 'ongoing' where id= 1;
+update Class set status = 'not-started' where id= 2;
+update Class set status = 'finished' where id= 3;
+
+
